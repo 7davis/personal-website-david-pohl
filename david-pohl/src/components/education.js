@@ -1,4 +1,3 @@
-import OneStation from "./one-station";
 
 export default function Education() {
     return (

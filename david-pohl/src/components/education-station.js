@@ -4,10 +4,10 @@ export default function EducationStation(props) {
 
     const facts = props.facts.map((e, i) => {
         return (<tr key={i} className="bg-white border-gray-700 dark:bg-transparent">
-            <th scope="row" className="ml-3 mt-2 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-                <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase">{ e.key }</span>
+            <th scope="row" className="ml-3 mt-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <span className="text-blue-800 font-bold mr-2 px-2.5 py-0.5 rounded dark:text-dav-aquamarine-500 uppercase">{ e.key }</span>
             </th>
-            <td className="px-3 py-2 font-semibold capitalize">
+            <td className="px-3 py-2 capitalize">
                 { e.value }
             </td>
         </tr>);

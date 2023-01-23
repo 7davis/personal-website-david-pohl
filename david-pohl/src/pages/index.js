@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { BsFillMoonStarsFill, BsLinkedin, BsGithub } from "react-icons/bs"
-import { FaGraduationCap, FaGithub } from "react-icons/fa"
+import { FaGraduationCap, FaGithub, FaArrowAltCircleDown } from "react-icons/fa"
 import Start from '@/components/start'
 import Education from '@/components/education'
 import EducationStation from '@/components/education-station'
@@ -14,13 +14,13 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className="px-14">
-                <section className="h-screen flex flex-col justify-center py-10">
-                    <div>
-                        <h1 className="text-6xl font-extrabold text-white text-opacity-70">David Pohl</h1>
+            <main className="h-screen overflow-auto px-96 snap-y snap-mandatory scroll-smooth">
+                <section className="h-screen flex flex-col justify-center py-10 snap-always snap-start">
+                    <div className="mt-auto">
+                        <h1 className="text-6xl font-extrabold text-white">David Pohl</h1>
                     </div>
                     <div>
-                        <h2 className="text-4xl font-bold text-gray-400 text-opacity-70 mt-2">Computer Science Student</h2>
+                        <h2 className="text-4xl font-bold text-gray-400 mt-2">Computer Science Student</h2>
                     </div>
                     <div>
                         <p className="text-lg text-dav-text mt-10">
@@ -28,14 +28,18 @@ export default function Home() {
                             Currently, I am working on my Bachelor's Thesis.
                         </p>
                     </div>
+                    <button type="button" className="mt-16 text-lg font-medium mr-2 px-5 py-2.5 w-48 rounded border dark:border-dav-aquamarine-900 dark:bg-dav-aquamarine-900 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-800 duration-300">contact me</button>
+                    <div className="flex flex-fill justify-center items-center mt-auto">
+                        <FaArrowAltCircleDown className="text-white text-7xl animate-bounce" />
+                    </div>
                 </section>
-                <section className="h-screen flex flex-col py-10">
+                <section className="h-screen flex flex-col py-10 snap-always snap-start">
                     <div className="flex flex-row items-center">
                         <h1 className="flex items-center text-5xl font-extrabold dark:text-white mr-2 uppercase">education</h1>
                         <div className="flex-grow border-t border-gray-700"></div>
                     </div>
 
-                    <ol className="relative border-l border-gray-200 dark:border-gray-700 mt-20">
+                    <ol className="relative border-l border-gray-200 dark:border-gray-700 mt-10">
                         <EducationStation
                             startDate="oct 2020"
                             endDate="jul 2023"
@@ -72,19 +76,19 @@ export default function Home() {
                         />
                     </ol>
                 </section>
-                <section className="h-screen flex flex-col py-10">
+                <section className="h-screen flex flex-col py-10 snap-always snap-start">
                     <div className="flex flex-row items-center">
                         <h1 className="flex items-center text-5xl font-extrabold dark:text-white mr-2 uppercase">professional</h1>
                         <div className="flex-grow border-t border-gray-700"></div>
                     </div>
 
-                    <ol className="relative border-l border-gray-200 dark:border-gray-700 mt-20">
+                    <ol className="relative border-l border-gray-200 dark:border-gray-700 mt-10">
                         <li className="mb-6 ml-4">
                             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 uppercase">aug 2021 - feb 2022</time>
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white uppercase">T-Systems MMS (Deutsche Telekom)</h3>
                             <h3 className="text-gray-900 dark:text-gray-400 uppercase">software engineering intern</h3>
-                            <ul class="max-w-md mt-2 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                            <ul className="max-w-md mt-2 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
                                 <li>
                                     Developed a tool for managing the company's server structures
                                 </li>
@@ -108,44 +112,48 @@ export default function Home() {
                         </li>
                     </ol>
                 </section>
-                <section className="h-screen flex flex-col py-10 justify-between">
+                <section className="h-screen flex flex-col py-10 snap-always snap-start">
                     <div className="flex flex-row items-center">
-                        <h1 className="flex items-center text-5xl font-extrabold dark:text-white mr-2 uppercase">contact me</h1>
+                        <h1 className="flex items-center text-5xl font-extrabold dark:text-white mr-2 uppercase">projects</h1>
                         <div className="flex-grow border-t border-gray-700"></div>
                     </div>
+                    <div class="container flex flex-col items-center mt-10">
+                        <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                            <div class="p-5 flex flex-col">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white uppercase">state-of-the-art keyphrase extraction</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                    In this project, I meticulously examined a range of <span className="font-semibold text-gray-200">research papers</span> tackling the issue of <span className="font-semibold text-gray-200">keyphrase extraction</span> from various angles.
+                                    I implemented the most noteworthy findings while enriching my <span className="font-semibold text-gray-200">Python module</span> and constructed a <span className="font-semibold text-gray-200">benchmarking module</span> to evaluate the performance of various algorithms.
+                                    To provide tangible access to my results, I have developed a neatly designed <span className="font-semibold text-gray-200">user interface</span>.
+                                </p>
+                                <div className="gap-1 mt-5 break-words block">
+                                    <a href="https://www.python.org/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">python</a>
+                                    <a href="https://www.docker.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">spaCy</a>
+                                    <a href="https://git-scm.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">NumPy</a>
+                                    <a href="https://www.ansible.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">pandas</a>
+                                    <a href="https://concourse-ci.org/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">Hugging Face</a>
+                                </div>
+                                <div className="gap-1 mt-2 break-words block">
+                                    <a href="https://reactjs.org/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">React</a>
+                                    <a href="https://www.javascript.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">JavaScript</a>
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">HTML</a>
+                                    <a href="https://tailwindcss.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">tailwindcss</a>
+                                </div>
+                                <button type="button" className="mt-8 text-lg font-medium mr-2 px-2 py-2.5 w-48 rounded border dark:border-dav-aquamarine-900 dark:bg-dav-aquamarine-900 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-800 duration-300">demo</button>
 
-                    <ol className="relative border-l border-gray-200 dark:border-gray-700 mt-20">
-                        <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 uppercase">aug 2021 - feb 2022</time>
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white uppercase">T-Systems MMS (Deutsche Telekom)</h3>
-                            <h3 className="text-gray-900 dark:text-gray-400 uppercase">software engineering intern</h3>
-                            <ul class="max-w-md mt-2 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-                                <li>
-                                    Developed a tool for managing the company's server structures
-                                </li>
-                                <li>
-                                    Implemented an automated pipeline for fetching, processing and visualizing the current structure
-                                </li>
-                                <li>
-                                    Intensively worked with the company's internal knowledge base Confluence
-                                </li>
-                                <li>
-                                    Continuously communicated the project's status and results to technical and non-technical colleagues
-                                </li>
-                            </ul>
-                            <div className="flex flex-row gap-1 mt-5">
-                                <a href="https://www.python.org/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">python</a>
-                                <a href="https://www.docker.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">docker</a>
-                                <a href="https://git-scm.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">git</a>
-                                <a href="https://www.ansible.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">ansible</a>
-                                <a href="https://concourse-ci.org/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">concourse</a>
                             </div>
-                        </li>
-                    </ol>
+                        </div>
+                    </div>
+
+
+
+                </section>
+                <section className="h-screen flex flex-col py-10 justify-between snap-always snap-start">
                     <footer className="">
                         <div className="border-t border-gray-700"></div>
-                        <a href="https://github.com/7davis" class="flex flex-col items-center gap-1 text-sm text-gray-500 sm:text-center dark:text-gray-400 mt-5 transition-all duration-300 hover:text-dav-aquamarine-300">
+                        <a href="https://github.com/7davis" className="flex flex-col items-center gap-1 text-sm text-gray-500 sm:text-center dark:text-gray-400 mt-5 transition-all duration-300 hover:text-dav-aquamarine-300">
                             <FaGithub className="text-lg" /><span>Designed & Built by David Pohl</span>
                         </a>
                     </footer>

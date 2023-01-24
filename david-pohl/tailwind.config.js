@@ -22,6 +22,7 @@ module.exports = {
                     '800': '#1b57b8',
                     '900': '#0a192f',
                 },
+                "darkest-blue": "hsl(218, 60%, 8%)",
                 'dav-aquamarine': {
                     '50': '#eefffa',
                     '100': '#c5fff0',

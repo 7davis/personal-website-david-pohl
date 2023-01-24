@@ -35,6 +35,7 @@ module.exports = {
                     '800': '#056a5b',
                     '900': '#0a574c',
                 },
+                "darkest-aquamarine": "hsla(171, 79%, 15%, 50%)",
                 "dav-text": "#8892b0",
                 "dav-link": "#64ffda",
 

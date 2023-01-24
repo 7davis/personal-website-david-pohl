@@ -1,9 +1,11 @@
+import React, { useState } from 'react';
+
 import Head from 'next/head'
-import { BsDownload } from "react-icons/bs"
+import { BsCircle, BsCircleFill } from "react-icons/bs"
 import { FaGraduationCap, FaGithub, FaArrowAltCircleDown, FaDownload } from "react-icons/fa"
 import Start from '@/components/start'
 import Education from '@/components/education'
-import EducationStation from '@/components/education-station'
+import { EducationStation, ProfessionalStation } from '@/components/education-station'
 
 export default function Home() {
     return (
@@ -14,50 +16,47 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <nav class="sticky top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-                <div class="container flex flex-wrap items-center justify-between mx-auto">
-                    <a href="https://flowbite.com/" class="flex items-center">
-                        <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-                        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-                    </a>
-                    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                        <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                            <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div id="loading-overlay" className="absolute bg-darkest-blue h-screen w-screen flex justify-center items-center">
+            <div id="loading-overlay" className="absolute bg-darkest-blue h-screen w-screen flex justify-center items-center z-50">
                 <svg className="m-10" viewBox="0 0 70 70" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
-                    <g><path id="dav-d" d="m60,10l-50,25l50,25" stroke="white" stroke-width="6" fill="none" /></g>
+                    <g><path id="dav-d" d="m10,60l25,-50l25,50" stroke="white" stroke-width="6" fill="none" /></g>
                 </svg>
                 <svg className="m-10" viewBox="0 0 70 70" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
                     <g><path id="dav-a" d="m60,10l-50,25l50,25" stroke="white" stroke-width="6" fill="none" />
                     </g></svg>
                 <svg className="m-10" viewBox="0 0 70 70" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
-                    <g><path id="dav-v" d="m60,10l-50,25l50,25" stroke="white" stroke-width="6" fill="none" />
+                    <g><path id="dav-v" d="m10,10l50,25l-50,25" stroke="white" stroke-width="6" fill="none" />
                     </g></svg>
             </div>
-            <main id="main" className="flex-grow overflow-y-scroll px-96">
-                <section className="h-full flex flex-col justify-center m-auto snap-always snap-start">
+            <nav className="px-52 py-2.5 sticky w-full z-20 top-0 left-0 bg-blue-zodiac-900">
+                <div className="container flex flex-wrap items-center justify-between mx-auto">
+                    <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                        <ul className="flex flex-col p-4 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 text-dav-text">
+                            <li>
+                                <a
+                                    href="#start-section"
+                                    className="whitespace-nowrap font-semibold transition-all delay-150 duration-300 uppercase hover:text-white">start</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#education-section"
+                                    className="whitespace-nowrap font-semibold transition-all delay-150 duration-300 uppercase hover:text-white">education</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#professional-section"
+                                    className="whitespace-nowrap font-semibold transition-all delay-150 duration-300 uppercase hover:text-white">professional</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#projects-section"
+                                    className="whitespace-nowrap font-semibold transition-all delay-150 duration-300 uppercase hover:text-white">projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main id="main" className="flex-grow overflow-auto flex flex-col px-52 scroll-smooth">
+                <section id="start-section" className="min-h-full flex flex-col justify-center max-w-4xl mb-20">
                     <div>
                         <h1 className="text-8xl font-extrabold text-white">David Pohl</h1>
                     </div>
@@ -66,19 +65,19 @@ export default function Home() {
                     </div>
                     <div>
                         <p className="text-xl text-dav-text mt-10">
-                            I'm a German Computer Science Student at <a href="https://www.uni-heidelberg.de/en" className="hover:animate-pulse whitespace-nowrap font-semibold text-dav-aquamarine-400 transition-all delay-150 duration-300 hover:text-white rounded">Heidelberg University</a> specializing in <a href="https://en.wikipedia.org/wiki/Natural_language_processing" className="hover:animate-pulse whitespace-nowrap font-semibold text-dav-aquamarine-400 transition-all delay-150 duration-300 hover:text-white rounded">Natural Language Processing</a> and <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" className="hover:animate-pulse whitespace-nowrap font-semibold text-dav-aquamarine-400 transition-all delay-150 duration-300 hover:text-white rounded">Artificial Intelligence</a>.
+                            I'm a German Computer Science Student at <a href="https://www.uni-heidelberg.de/en" className="whitespace-nowrap font-semibold text-dav-aquamarine-400 transition-all delay-150 duration-300 hover:text-white">Heidelberg University</a> specializing in <a href="https://en.wikipedia.org/wiki/Natural_language_processing" className="whitespace-nowrap font-semibold text-dav-aquamarine-400 transition-all delay-150 duration-300 hover:text-white">Natural Language Processing</a> and <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" className="whitespace-nowrap font-semibold text-dav-aquamarine-400 transition-all delay-150 duration-300 hover:text-white">Artificial Intelligence</a>.
                             <br />Currently, I am working on my Bachelor's Thesis.
                         </p>
                     </div>
-                    <button type="button" className="mt-16 text-xl font-bold mr-2 px-5 py-2.5 w-48 rounded dark:bg-dav-aquamarine-700 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-600 duration-300">cv</button>
+                    <button type="button" className="ml-16 mt-24 text-xl font-bold mr-2 px-5 py-2.5 w-48 rounded dark:bg-dav-aquamarine-700 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-600 duration-300">cv</button>
                 </section>
-                <section className="h-screen flex flex-col py-10 snap-always snap-start">
+                <section id="education-section" className="flex flex-col mb-20">
                     <div className="flex flex-row items-center">
-                        <h1 className="flex items-center text-5xl font-extrabold dark:text-white mr-2 uppercase">education</h1>
-                        <div className="flex-grow border-t border-gray-700"></div>
+                        <h1 className="flex items-center text-6xl font-extrabold dark:text-white mr-2 uppercase">education</h1>
+
                     </div>
 
-                    <ol className="relative border-l border-gray-200 dark:border-gray-700 mt-10">
+                    <ol className="mt-10 ml-16">
                         <EducationStation
                             startDate="oct 2020"
                             endDate="jul 2023"
@@ -110,48 +109,32 @@ export default function Home() {
                             facts={[
                                 { key: "grade", value: "3.9/4.0 (valedictorian)" },
                                 { key: "focus", value: "mathematics, computer science, german" },
-                                { key: "honors", value: "valedictorian (among approx. 120 graduates)" },
+                                { key: "honors", value: "valedictorian (among ~120 graduates)" },
                             ]}
                         />
                     </ol>
                 </section>
-                <section className="h-screen flex flex-col py-10 snap-always snap-start">
+                <section id="professional-section" className="flex flex-col mb-20">
                     <div className="flex flex-row items-center">
-                        <h1 className="flex items-center text-5xl font-extrabold dark:text-white mr-2 uppercase">professional</h1>
-                        <div className="flex-grow border-t border-gray-700"></div>
+                        <h1 className="flex items-center text-6xl font-extrabold dark:text-white mr-2 uppercase">professional</h1>
                     </div>
 
-                    <ol className="relative border-l border-gray-200 dark:border-gray-700 mt-10">
-                        <li className="mb-6 ml-4">
-                            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500 uppercase">aug 2021 - feb 2022</time>
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white uppercase">T-Systems MMS (Deutsche Telekom)</h3>
-                            <h3 className="text-gray-900 dark:text-gray-400 uppercase">software engineering intern</h3>
-                            <ul className="max-w-md mt-2 space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
-                                <li>
-                                    Developed a tool for managing the company's server structures
-                                </li>
-                                <li>
-                                    Implemented an automated pipeline for fetching, processing and visualizing the current structure
-                                </li>
-                                <li>
-                                    Intensively worked with the company's internal knowledge base Confluence
-                                </li>
-                                <li>
-                                    Continuously communicated the project's status and results to technical and non-technical colleagues
-                                </li>
-                            </ul>
-                            <div className="flex flex-row gap-1 mt-5">
-                                <a href="https://www.python.org/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">python</a>
-                                <a href="https://www.docker.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">docker</a>
-                                <a href="https://git-scm.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">git</a>
-                                <a href="https://www.ansible.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">ansible</a>
-                                <a href="https://concourse-ci.org/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">concourse</a>
-                            </div>
-                        </li>
+                    <ol className="mt-10 ml-16">
+                        <ProfessionalStation
+                            startDate="aug 2021"
+                            endDate="feb 2022"
+                            institution="t-systems mms (deutsche telekom)"
+                            level="software engineering intern"
+                            points={[
+                                "Developed a tool for managing the company's server structures",
+                                "Implemented an automated pipeline for fetching, processing and visualizing the current structure",
+                                "Intensively worked with the company's internal knowledge base Confluence",
+                                "Continuously communicated the project's status and results to technical and non-technical colleagues"
+                            ]}
+                        />
                     </ol>
                 </section>
-                <section className="h-screen flex flex-col py-10 snap-always snap-start">
+                <section id="projects-section" className="flex flex-col justify-center mb-20">
                     <div className="flex flex-row items-center">
                         <h1 className="flex items-center text-5xl font-extrabold dark:text-white mr-2 uppercase">projects</h1>
                         <div className="flex-grow border-t border-gray-700"></div>
@@ -185,19 +168,12 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-
-
-
                 </section>
-                <section className="h-screen flex flex-col py-10 justify-between snap-always snap-start">
-                    <footer className="">
-                        <div className="border-t border-gray-700"></div>
-                        <a href="https://github.com/7davis" className="flex flex-col items-center gap-1 text-sm text-gray-500 sm:text-center dark:text-gray-400 mt-5 transition-all duration-300 hover:text-dav-aquamarine-300">
-                            <FaGithub className="text-lg" /><span>Designed & Built by David Pohl</span>
-                        </a>
-                    </footer>
-
-                </section>
+                <footer className="mb-5">
+                    <a href="https://github.com/7davis" className="flex flex-col items-center gap-1 text-sm text-gray-500 sm:text-center dark:text-gray-400 mt-5 transition-all duration-300 hover:text-dav-aquamarine-300">
+                        <FaGithub className="text-lg" /><span>Designed & Built by David Pohl</span>
+                    </a>
+                </footer>
             </main>
         </div>
     )

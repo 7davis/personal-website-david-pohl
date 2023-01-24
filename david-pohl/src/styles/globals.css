@@ -10,7 +10,7 @@
 
 :root {
     --on-hover: white;
-    --secondary: hsl(218, 31%, 5%);
+    --secondary: hsl(218, 60%, 8%);
 }
 
 html,
@@ -19,10 +19,11 @@ body {
     width: 100%;
     max-width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
-    width: 12px;
+    width: 15px;
 }
 
 *::-webkit-scrollbar-track {
@@ -47,15 +48,15 @@ body {
 }
 
 #dav-d {
-    animation: spin-d 1s cubic-bezier(.51, .11, .05, 1.07) forwards, lock-d .5s cubic-bezier(.51, .11, .05, 1.07) forwards 2s, glow 1s linear forwards 2.5s;
+    animation: spin 1s cubic-bezier(.51, .11, .05, 1.07) forwards .5s, lock .25s cubic-bezier(.51, .11, .05, 1.07) forwards 2s, glow 1.25s linear forwards 2.25s;
 }
 
 #dav-a {
-    animation: spin-a 1s cubic-bezier(.51, .11, .05, 1.07) forwards .5s, lock-a .5s cubic-bezier(.51, .11, .05, 1.07) forwards 2s, glow 1s linear forwards 2.5s;
+    animation: spin 1s cubic-bezier(.51, .11, .05, 1.07) forwards .75s, lock .25s cubic-bezier(.51, .11, .05, 1.07) forwards 2s, glow 1.25s linear forwards 2.25s;
 }
 
 #dav-v {
-    animation: spin-v 1s cubic-bezier(.51, .11, .05, 1.07) forwards 1s, lock-v .5s cubic-bezier(.51, .11, .05, 1.07) forwards 2s, glow 1s linear forwards 2.5s;
+    animation: spin 1s cubic-bezier(.51, .11, .05, 1.07) forwards 1.25s, lock .25s cubic-bezier(.51, .11, .05, 1.07) forwards 2s, glow 1.25s linear forwards 2.25s;
 }
 
 #loading-overlay {
@@ -71,6 +72,7 @@ body {
     0% {
         transform: translateY(100%);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -89,77 +91,14 @@ body {
 @keyframes glow {
     0% {
         filter: none;
-        stroke: white;
     }
 
     100% {
-        filter: drop-shadow(0 0 3px hsl(166, 100%, 70%));
-        stroke: #14edc0;
+        filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
     }
 }
 
-@keyframes lock-d {
-    0% {
-        transform: rotate(180deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(180deg) translateY(5px);
-    }
-
-    100% {
-        transform: rotate(180deg) translateY(0);
-    }
-}
-
-@keyframes lock-a {
-    0% {
-        transform: rotate(90deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(90deg) translateX(-5px);
-    }
-
-    100% {
-        transform: rotate(90deg) translateY(0);
-    }
-}
-
-@keyframes lock-v {
-    0% {
-        transform: rotate(270deg) translateY(0);
-    }
-
-    50% {
-        transform: rotate(270deg) translateX(5px);
-    }
-
-    100% {
-        transform: rotate(270deg) translateY(0);
-    }
-}
-
-
-@keyframes spin-d {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    40% {
-        transform: rotate(200deg);
-    }
-
-    60% {
-        transform: rotate(170deg);
-    }
-
-    100% {
-        transform: rotate(180deg);
-    }
-}
-
-@keyframes spin-a {
+@keyframes spin {
     0% {
         transform: rotate(0deg);
     }
@@ -177,20 +116,16 @@ body {
     }
 }
 
-@keyframes spin-v {
+@keyframes lock {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(90deg) translateY(0);
     }
 
-    40% {
-        transform: rotate(290deg);
-    }
-
-    60% {
-        transform: rotate(260deg);
+    90% {
+        transform: rotate(90deg) translateX(-5px);
     }
 
     100% {
-        transform: rotate(270deg);
+        transform: rotate(90deg) translateY(0);
     }
 }

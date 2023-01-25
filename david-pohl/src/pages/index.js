@@ -27,7 +27,7 @@ export default function Home() {
                     <g><path id="dav-v" d="m10,10l50,25l-50,25" stroke="white" stroke-width="6" fill="none" />
                     </g></svg>
             </div>
-            <nav className="px-52 py-2.5 sticky w-full z-20 top-0 left-0 bg-blue-zodiac-900">
+            <nav className="px-52 py-2.5 fixed w-full z-20 top-0 left-0 backdrop-blur-lg bg-blue-zodiac-900 bg-opacity-75 shadow-md">
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                         <ul className="flex flex-col p-4 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 text-dav-text">
@@ -69,7 +69,7 @@ export default function Home() {
                             <br />Currently, I am working on my Bachelor's Thesis.
                         </p>
                     </div>
-                    <button type="button" className="ml-16 mt-24 text-xl font-bold mr-2 px-5 py-2.5 w-48 rounded dark:bg-dav-aquamarine-700 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-600 duration-300">cv</button>
+                    <button type="button" className="mt-20 text-xl font-bold mr-2 px-5 py-2.5 w-48 rounded dark:bg-dav-aquamarine-700 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-600 duration-300">cv</button>
                 </section>
                 <section id="education-section" className="flex flex-col mb-20">
                     <div className="flex flex-row items-center">
@@ -77,7 +77,7 @@ export default function Home() {
 
                     </div>
 
-                    <ol className="mt-10 ml-16">
+                    <ol className="mt-10">
                         <EducationStation
                             startDate="oct 2020"
                             endDate="jul 2023"
@@ -119,7 +119,7 @@ export default function Home() {
                         <h1 className="flex items-center text-6xl font-extrabold dark:text-white mr-2 uppercase">professional</h1>
                     </div>
 
-                    <ol className="mt-10 ml-16">
+                    <ol className="mt-10">
                         <ProfessionalStation
                             startDate="aug 2021"
                             endDate="feb 2022"
@@ -163,7 +163,7 @@ export default function Home() {
                                     <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">HTML</a>
                                     <a href="https://tailwindcss.com/" className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded border dark:border-dav-aquamarine-900 dark:bg-transparent dark:text-dav-aquamarine-500 uppercase transition-all hover:bg-dav-aquamarine-900 hover:text-white">tailwindcss</a>
                                 </div>
-                                <button type="button" className="mt-8 text-lg font-medium mr-2 px-2 py-2.5 w-48 rounded border dark:border-dav-aquamarine-900 dark:bg-dav-aquamarine-900 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-800 duration-300">demo</button>
+                                <a href="/keyphrases" className="mt-8 text-center text-lg font-medium mr-2 px-2 py-2.5 w-48 rounded border dark:border-dav-aquamarine-900 dark:bg-dav-aquamarine-900 dark:text-white uppercase transition ease-in-out delay-150 hover:scale-110 hover:bg-dav-aquamarine-800 duration-300">demo</a>
 
                             </div>
                         </div>

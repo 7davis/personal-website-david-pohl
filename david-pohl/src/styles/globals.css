@@ -10,7 +10,7 @@
 
 :root {
     --on-hover: white;
-    --secondary: hsl(218, 60%, 8%);
+    --secondary: hsla(225, 20%, 61%, 50%);
 }
 
 html,
@@ -23,7 +23,7 @@ body {
 }
 
 *::-webkit-scrollbar {
-    width: 15px;
+    width: 12px;
 }
 
 *::-webkit-scrollbar-track {

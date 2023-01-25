@@ -1,6 +1,6 @@
 function Station(props, detail) {
     return (
-        <li className="mb-8 ml-4 bg-darkest-blue px-5 py-3 rounded">
+        <li className="mb-8 bg-darkest-blue px-5 py-3 rounded">
             <time className="mb-1 text-md font-normal leading-none text-gray-400 dark:text-gray-400 uppercase">{props.startDate} - {props.endDate}</time>
             <h3 className="text-2xl font-bold text-white uppercase mt-2">{props.institution}</h3>
             <h3 className="text-gray-300 uppercase text-xl font-semibold">{props.level}</h3>

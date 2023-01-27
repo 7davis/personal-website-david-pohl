@@ -1,3 +1,5 @@
-<svg className="m-20" viewBox="0 0 100 100" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                    <g><path id="dav-a" d="m80,20l-50,25l50,25" stroke="white" stroke-width="3" fill="none" />
-                    </g></svg>
+<svg width="70" height="70" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <path id="svg_6" d="m10,10l50,25l-50,25" stroke="white" stroke-width="3" fill="none" />
+    </g>
+</svg>

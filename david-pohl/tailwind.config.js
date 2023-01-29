@@ -9,7 +9,7 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            opensans: ["open sans", "sans-serif"]
+            roboto: ["Roboto", "sans-serif"]
         },
         extend: {
             colors: {
@@ -48,6 +48,8 @@ module.exports = {
                     "300": "#2a5ea7",
                     "400": "#17355e"
                 },
+                "dav-blue": "#4831d4",
+                "dav-darkblue": "#281b76",
                 "dav-primary": "hsl(248, 65%, 51%)",
                 "dav-secondary": "hsl(200, 100%, 90%)",
                 "dav-tertiary": "hsl(248, 60%, 95%)",
@@ -56,9 +58,7 @@ module.exports = {
                 "dav-midpurple": "hsl(267, 52%, 55%)",
                 "dav-lightpurple": "hsl(267, 52%, 70%)",
                 "dav-whitepurple": "hsl(267, 52%, 96%)",
-                "dav-darkgray": "#3d155f",
                 "dav-mint": "#5be9b9",
-                "dav-darkblue": "hsl(248, 65%, 51%)",
                 "dav-orange": "hsl(33, 95%, 48%)",
             },
         },

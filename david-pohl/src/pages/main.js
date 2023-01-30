@@ -34,98 +34,88 @@ export default function Main() {
 
             </nav>
             <main className="snap-y snap-mandatory h-screen overflow-auto">
-                <section className="snap-start p-64 flex flex-col h-screen bg-dav-darkblue text-white">
-                    <h1 className="flex-grow flex items-center text-7xl font-bold tracking-tight">Hi, I'm David.</h1>
-                    <p className="flex-grow text-2xl font-semibold tracking-tighter">
-                        ...
+                <section className="snap-start p-64 flex flex-col h-screen bg-dav-darkblue">
+                    <h1 className="flex-grow flex items-center text-8xl font-bold tracking-tight text-white">Hi, I'm David.</h1>
+                    <p className="flex-grow text-2xl tracking-tight text-white max-w-2xl">
+                        I'm a German Computer Science Student at Heidelberg University focusing on Natural Language Processing and Artificial Intelligence. I always look out for new learning opportunities.
                     </p>
                 </section>
-
-
-
-
-
+                <section>
+                </section>
                 <section className="snap-start p-64 h-full flex items-center bg-white">
-                    <div className="w-full flex flex-col">
-                        <div className="flex">
-                            <div className="flex flex-col gap-8">
-                                <h1 className="text-7xl font-bold text-dav-darkblue tracking-tight">Education</h1>
-                                <ol class="relative border-l border-gray-700">
-                                    <li class="mb-10 ml-4">
-                                        <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
-                                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">10/2020 - 07/2023</time>
-                                        <p class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Heidelberg, DE</p>
-                                        <h3 class="text-2xl tracking-tight font-semibold text-dav-darkblue">Heidelberg University</h3>
-                                        <h4 className="text-lg tracking-tight text-gray-600">BS Computer Science</h4>
-                                        <h4 className="tracking-tight text-gray-500 mt-2">GPA: 3.9/4.0</h4>
-                                        <h4 className="tracking-tight text-gray-500">FOCUS: Natural Language Processing</h4>
-                                        <h4 className="tracking-tight text-gray-500">THESIS: "Approaching Ambiguity in Medical Documents"</h4>
-                                    </li>
-                                    <li class="mb-10 ml-4">
-                                        <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
-                                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">08/2022 - 12/2022</time>
-                                        <p class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Raleigh, US</p>
-                                        <h3 class="text-2xl tracking-tight font-semibold text-dav-darkblue">NC State University</h3>
-                                        <h4 className="text-lg tracking-tight text-gray-600">Exchange Student (Computer Science)</h4>
-                                        <h4 className="tracking-tight text-gray-500 mt-2">GPA: 4.0/4.0</h4>
-                                        <h4 className="tracking-tight text-gray-500">FOCUS: Frontend Development, Statistics</h4>
-                                    </li>
-                                    <li class="ml-4">
-                                        <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
-                                        <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">08/2012 - 06/2020</time>
-                                        <p class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Cologne, DE</p>
-                                        <h3 class="text-2xl tracking-tight font-semibold text-dav-darkblue">Schiller-Gymnasium Cologne</h3>
-                                        <h4 className="text-lg tracking-tight text-gray-600">General University Entrance Qualification</h4>
-                                        <h4 className="tracking-tight text-gray-500 mt-2">GPA: 3.9/4.0 (Valedictorian)</h4>
-                                        <h4 className="tracking-tight text-gray-500">FOCUS: Mathematics, German</h4>
-                                    </li>
-                                </ol>
-                            </div>
+                    <div className="w-full flex justify-between">
+                        <div className="flex flex-col gap-8">
+                            <h1 className="text-7xl font-bold text-dav-darkblue tracking-tight">Education</h1>
+                            <ol class="relative border-l border-gray-700">
+                                <li class="mb-10 ml-4">
+                                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">10/2020 - 07/2023</time>
+                                    <p class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Heidelberg, DE</p>
+                                    <h3 class="text-2xl tracking-tight font-semibold text-dav-darkblue">Heidelberg University</h3>
+                                    <h4 className="text-lg tracking-tight text-gray-600">BS Computer Science</h4>
+                                    <h4 className="tracking-tight text-gray-500 mt-2">GPA: 3.9/4.0</h4>
+                                    <h4 className="tracking-tight text-gray-500">FOCUS: Natural Language Processing</h4>
+                                    <h4 className="tracking-tight text-gray-500">THESIS: "Approaching Ambiguity in Medical Documents"</h4>
+                                </li>
+                                <li class="mb-10 ml-4">
+                                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">08/2022 - 12/2022</time>
+                                    <p class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Raleigh, US</p>
+                                    <h3 class="text-2xl tracking-tight font-semibold text-dav-darkblue">NC State University</h3>
+                                    <h4 className="text-lg tracking-tight text-gray-600">Exchange Student (Computer Science)</h4>
+                                    <h4 className="tracking-tight text-gray-500 mt-2">GPA: 4.0/4.0</h4>
+                                    <h4 className="tracking-tight text-gray-500">FOCUS: Frontend Development, Statistics</h4>
+                                </li>
+                                <li class="ml-4">
+                                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">08/2012 - 06/2020</time>
+                                    <p class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Cologne, DE</p>
+                                    <h3 class="text-2xl tracking-tight font-semibold text-dav-darkblue">Schiller-Gymnasium Cologne</h3>
+                                    <h4 className="text-lg tracking-tight text-gray-600">General University Entrance Qualification</h4>
+                                    <h4 className="tracking-tight text-gray-500 mt-2">GPA: 3.9/4.0 (Valedictorian)</h4>
+                                    <h4 className="tracking-tight text-gray-500">FOCUS: Mathematics, German</h4>
+                                </li>
+                            </ol>
                         </div>
-                        <div className="flex justify-end">
-                            <div className="flex flex-col">
-                                <h1 className="text-6xl font-bold text-dav-blue tracking-tight">Education</h1>
-                                <p>....</p>
-                            </div>
+                        <div className="flex flex-col justify-end gap-8">
+                            <h1 className="text-7xl font-bold text-dav-darkblue tracking-tight">Professional</h1>
+                            <ol class="relative border-l border-gray-700">
+                                <li class="mb-10 ml-4">
+                                    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-gray-900 bg-gray-700"></div>
+                                    <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">10/2020 - 07/2023</time>
+                                    <p class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Heidelberg, DE</p>
+                                    <h3 class="text-2xl tracking-tight font-semibold text-dav-darkblue">Heidelberg University</h3>
+                                    <h4 className="text-lg tracking-tight text-gray-600">BS Computer Science</h4>
+                                    <h4 className="tracking-tight text-gray-500 mt-2">GPA: 3.9/4.0</h4>
+                                    <h4 className="tracking-tight text-gray-500">FOCUS: Natural Language Processing</h4>
+                                    <h4 className="tracking-tight text-gray-500">THESIS: "Approaching Ambiguity in Medical Documents"</h4>
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </section>
-                <section className="snap-start p-40 shrink-0 h-screen flex bg-white">
-                    <div className="w-full flex flex-col">
-                        <h1 className="mb-8 text-6xl tracking-tight font-bold text-dav-purple">Education</h1>
-                        <div className="w-full h-full">
-                            <div className="flex items-center h-48 gap-8">
-                                <div className="flex flex-col justify-between items-center font-semibold text-dav-purple">
-                                    <span className="text-xl tracking-tight">OCT</span>
-                                    <span className="text-3xl tracking-tight">2020</span>
-                                </div>
-                                <div className="station flex flex-col bg-dav-purple text-white px-6 py-4 duration-300">
-                                    <h1 className="text-4xl font-semibold tracking-tight">Heidelberg University</h1>
-                                    <h2 className="text-xl font-medium tracking-tight">B.Sc. Computer Science</h2>
-                                </div>
-                                <div className="flex flex-col justify-between items-center font-semibold text-dav-purple">
-                                    <span className="text-xl tracking-tight">AUG</span>
-                                    <span className="text-3xl tracking-tight">2023</span>
-                                </div>
-                            </div>
-                            <div className="flex justify-between items-center h-48 gap-8">
-                                <div className="flex flex-col justify-between items-center font-semibold text-dav-purple">
-                                    <span className="text-xl tracking-tight">OCT</span>
-                                    <span className="text-3xl tracking-tight">2020</span>
-                                </div>
-                                <div className="flex-grow flex flex-col bg-dav-purple text-white px-6 py-4 rounded">
-                                    <h1 className="text-4xl font-semibold tracking-tight">Heidelberg University</h1>
-                                    <h2 className="text-xl font-medium tracking-tight">B.Sc. Computer Science</h2>
-                                </div>
-                                <div className="flex flex-col justify-between items-center font-semibold text-dav-purple">
-                                    <span className="text-xl tracking-tight">AUG</span>
-                                    <span className="text-3xl tracking-tight">2023</span>
-                                </div>
-                            </div>
+                <section className="snap-start p-64 flex flex-col h-screen">
+                    <h1 className="text-7xl font-bold text-dav-darkblue tracking-tight mb-16 text-end">Projects</h1>
+                    <div className="flex flex-col w-full border-b-4 border-dav-darkblue">
+                        <h1 className="text-4xl font-bold tracking-tight text-dav-darkblue">State-Of-The-Art Keyphrase Extraction</h1>
+                        <p className="mt-4 tracking-tight text-gray-600">
+                            In this project, I meticulously examined a range of research papers tackling the issue of keyphrase extraction from various angles.
+                            I implemented the most noteworthy findings while enriching my Python module and constructed a benchmarking module to evaluate the performance of various algorithms.
+                            To provide tangible access to my results, I have developed a neatly designed user interface.
+                        </p>
+                        <div className="flex text-dav-darkblue border-white mt-6 gap-3">
+                            <a href="https://www.python.org/" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">Python</a>
+                            <a href="https://spacy.io/" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">spaCy</a>
+                            <a href="https://numpy.org/" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">NumPy</a>
+                            <a href="https://pandas.pydata.org/" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">pandas</a>
+                            <a href="https://huggingface.co/" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">Hugging Face</a>
+                            <a href="https://reactjs.org/" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">React.js</a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">JavaScript</a>
+                            <a href="https://tailwindcss.com/" className="border border-dav-darkblue text-dav-darkblue px-1.5 py-0.5 rounded hover:bg-dav-darkblue hover:text-white duration-300">tailwindcss</a>
                         </div>
-
-
-
+                        <div className="mt-8 mb-8 flex">
+                            <a href="#" className="bg-dav-darkblue text-xl text-white px-4 py-2 rounded hover:scale-110 delay-150 duration-300 hover:bg-opacity-90">Try it out</a>
+                        </div>
                     </div>
                 </section>
 

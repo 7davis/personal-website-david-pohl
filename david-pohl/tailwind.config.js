@@ -48,8 +48,9 @@ module.exports = {
                     "300": "#2a5ea7",
                     "400": "#17355e"
                 },
-                "dav-blue": "#4831d4",
+                "dav-lightblue": "hsl(202deg 90% 70%)",
                 "dav-darkblue": "#281b76",
+                "dav-lime": "hsl(81, 83%, 73%)",
                 "dav-primary": "hsl(248, 65%, 51%)",
                 "dav-secondary": "hsl(200, 100%, 90%)",
                 "dav-tertiary": "hsl(248, 60%, 95%)",

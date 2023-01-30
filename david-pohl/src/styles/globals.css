@@ -14,6 +14,7 @@
     --secondary: hsla(225, 20%, 61%, 50%);
 }
 
+
 html,
 body {
     height: 100%;
@@ -57,7 +58,7 @@ body {
 }
 
 .hallo {
-    color: hsl(267, 52%, 49%);
+    color: hsl(81, 83%, 73%);
     background-color: hsl(248, 65%, 51%);
 }
 
